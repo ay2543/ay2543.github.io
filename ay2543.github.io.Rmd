@@ -13,3 +13,6 @@ output:
 
 
 Here's some text. I like the internet. I use [google] (https://www.google.com) all the time to do data science.
+
+Here is a link to the about page: [about](about.html)
+I also made a bonus [extra page](extra_page.html)

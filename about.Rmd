@@ -1,0 +1,14 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is Amy's awesome website
+
+This is the about page. I used rmarkdown to make this.
+
+
