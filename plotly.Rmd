@@ -41,7 +41,7 @@ Let's make a scatterplot!
 ```{r}
 nyc_airbnb %>% 
   mutate(
-    text_label = str_c("Price: ", price)
+    text_label = str_c("Price: ", price, "\nRating: ", rating)
   ) %>% 
   plot_ly(
     x = ~lat, # ~ indicates lat is a variable
@@ -54,9 +54,38 @@ nyc_airbnb %>%
 ```
 
 
+Let's make boxplots
+
+```{r}
+nyc_airbnb %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+  plot_ly(y = ~price, color = ~neighbourhood,
+          type = "box", colors = "viridis")
+```
+
+Can we make a bar plot?
+
+```{r}
+nyc_airbnb %>% 
+  count(neighbourhood) %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
+  plot_ly(
+    x = ~neighbourhood, y = ~n,
+    type = "bar")
+```
 
 
+## ggplotly
 
+```{r}
+ggp_scatterplot = nyc_airbnb %>% 
+  ggplot(aes(x = lat, y = long, color = price)) +
+  geom_point()
+
+ggplotly(ggp_scatterplot) 
+# slower to interact, a bit uglier, but useful if you want to use ggplot by yourself first
+# plot_ly is still superior if sharing with others
+```
 
 
 
