@@ -87,7 +87,8 @@ ggplotly(ggp_scatterplot)
 # plot_ly is still superior if sharing with others
 ```
 
-
+## Create a dashboard
+But dashboards are a standalone thing - need to do them separately
 
 
 
