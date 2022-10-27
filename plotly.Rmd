@@ -89,6 +89,8 @@ ggplotly(ggp_scatterplot)
 
 ## Create a dashboard
 But dashboards are a standalone thing - need to do them separately
+If you were to move it within the github.io (website) repo, it becomes part of the website - need to build website to get right formatting.
+Can also do a more specific command: `rmarkdown::render("dashboard_name.Rmd", output_format = "flexdashboard::flex_dashboard")`
 
 
 
